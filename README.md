@@ -1,6 +1,6 @@
 # burger_buzz
 
-A new Flutter project.
+Food Ordering app created using Flutter.
 
 ## Getting Started
 
