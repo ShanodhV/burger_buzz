@@ -11,6 +11,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  bool burger = false, pizza = false, ffries = false, icecream = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,9 +40,166 @@ class _HomeState extends State<Home> {
                 style: AppWidget.HeadlineTextFieldStyle()),
             Text("Discover And Get Great Buegers",
                 style: AppWidget.LightTextFieldStyle()),
+            SizedBox(
+              height: 20.0,
+            ),
+            showItem(),
+            SizedBox(
+              height: 30.0,
+            ),
+            SingleChildScrollView(
+              child: Row(
+                children: [
+                  Material(
+                    elevation: 5.0,
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      padding: EdgeInsets.all(14),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image.asset(
+                            "images/Chicken_burger.png",
+                            height: 150,
+                            width: 150,
+                            fit: BoxFit.cover,
+                          ),
+                          Text(
+                            "Chicken Burger",
+                            style: AppWidget.semiBoldTextFieldStyle(),
+                          ),
+                          SizedBox(
+                            height: 5.0,
+                          ),
+                          Text(
+                            "Regular Burger",
+                            style: AppWidget.LightTextFieldStyle(),
+                          ),
+                          SizedBox(
+                            height: 5.0,
+                          ),
+                          Text(
+                            "\Rs.550",
+                            style: AppWidget.semiBoldTextFieldStyle(),
+                          )
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
+    );
+  }
+
+  Widget showItem() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        GestureDetector(
+          onTap: () {
+            burger = true;
+            pizza = false;
+            ffries = false;
+            icecream = false;
+            setState(() {});
+          },
+          child: Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+                decoration: BoxDecoration(
+                    color: burger ? Colors.black : Colors.white,
+                    borderRadius: BorderRadius.circular(10)),
+                padding: EdgeInsets.all(8),
+                child: Image.asset(
+                  "images/burger.png",
+                  height: 40,
+                  width: 40,
+                  fit: BoxFit.cover,
+                  color: burger ? Colors.white : Colors.black,
+                )),
+          ),
+        ),
+        GestureDetector(
+          onTap: () {
+            burger = false;
+            pizza = true;
+            ffries = false;
+            icecream = false;
+            setState(() {});
+          },
+          child: Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+                decoration: BoxDecoration(
+                    color: pizza ? Colors.black : Colors.white,
+                    borderRadius: BorderRadius.circular(10)),
+                padding: EdgeInsets.all(8),
+                child: Image.asset(
+                  "images/pizza.png",
+                  height: 40,
+                  width: 40,
+                  fit: BoxFit.cover,
+                  color: pizza ? Colors.white : Colors.black,
+                )),
+          ),
+        ),
+        GestureDetector(
+          onTap: () {
+            burger = false;
+            pizza = false;
+            ffries = true;
+            icecream = false;
+            setState(() {});
+          },
+          child: Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+                decoration: BoxDecoration(
+                    color: ffries ? Colors.black : Colors.white,
+                    borderRadius: BorderRadius.circular(10)),
+                padding: EdgeInsets.all(8),
+                child: Image.asset(
+                  "images/ffries.png",
+                  height: 40,
+                  width: 40,
+                  fit: BoxFit.cover,
+                  color: ffries ? Colors.white : Colors.black,
+                )),
+          ),
+        ),
+        GestureDetector(
+          onTap: () {
+            burger = false;
+            pizza = false;
+            ffries = false;
+            icecream = true;
+            setState(() {});
+          },
+          child: Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+                decoration: BoxDecoration(
+                    color: icecream ? Colors.black : Colors.white,
+                    borderRadius: BorderRadius.circular(10)),
+                padding: EdgeInsets.all(8),
+                child: Image.asset(
+                  "images/ice-cream.png",
+                  height: 40,
+                  width: 40,
+                  fit: BoxFit.cover,
+                  color: icecream ? Colors.white : Colors.black,
+                )),
+          ),
+        ),
+      ],
     );
   }
 }
