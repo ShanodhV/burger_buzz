@@ -3,6 +3,7 @@
 import 'dart:html';
 
 import 'package:burger_buzz/Widget/widget_support.dart';
+import 'package:burger_buzz/pages/details.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -30,7 +31,7 @@ class _HomeState extends State<Home> {
                   margin: EdgeInsets.only(right: 20.0),
                   padding: EdgeInsets.all(3),
                   decoration: BoxDecoration(
-                      color: Colors.black,
+                      color: const Color.fromARGB(255, 82, 162, 85),
                       borderRadius: BorderRadius.circular(10)),
                   child: Icon(Icons.shopping_cart, color: Colors.white),
                 )
@@ -54,41 +55,47 @@ class _HomeState extends State<Home> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  Container(
-                    margin: EdgeInsets.all(4),
-                    child: Material(
-                      elevation: 5.0,
-                      borderRadius: BorderRadius.circular(20),
-                      child: Container(
-                        padding: EdgeInsets.all(14),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              "images/Chicken_burger.png",
-                              height: 150,
-                              width: 150,
-                              fit: BoxFit.cover,
-                            ),
-                            Text(
-                              "Chicken Burger",
-                              style: AppWidget.semiBoldTextFieldStyle(),
-                            ),
-                            SizedBox(
-                              height: 5.0,
-                            ),
-                            Text(
-                              "Regular Burger",
-                              style: AppWidget.LightTextFieldStyle(),
-                            ),
-                            SizedBox(
-                              height: 5.0,
-                            ),
-                            Text(
-                              "\Rs.550",
-                              style: AppWidget.semiBoldTextFieldStyle(),
-                            )
-                          ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Details()));
+                    },
+                    child: Container(
+                      margin: EdgeInsets.all(4),
+                      child: Material(
+                        elevation: 5.0,
+                        borderRadius: BorderRadius.circular(20),
+                        child: Container(
+                          padding: EdgeInsets.all(14),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.asset(
+                                "images/Chicken_burger.png",
+                                height: 150,
+                                width: 150,
+                                fit: BoxFit.cover,
+                              ),
+                              Text(
+                                "Chicken Burger",
+                                style: AppWidget.semiBoldTextFieldStyle(),
+                              ),
+                              SizedBox(
+                                height: 5.0,
+                              ),
+                              Text(
+                                "Regular Burger",
+                                style: AppWidget.LightTextFieldStyle(),
+                              ),
+                              SizedBox(
+                                height: 5.0,
+                              ),
+                              Text(
+                                "\Rs.550",
+                                style: AppWidget.semiBoldTextFieldStyle(),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -216,7 +223,9 @@ class _HomeState extends State<Home> {
             borderRadius: BorderRadius.circular(10),
             child: Container(
                 decoration: BoxDecoration(
-                    color: burger ? Colors.black : Colors.white,
+                    color: burger
+                        ? const Color.fromARGB(255, 82, 162, 85)
+                        : Colors.white,
                     borderRadius: BorderRadius.circular(10)),
                 padding: EdgeInsets.all(8),
                 child: Image.asset(
@@ -224,7 +233,9 @@ class _HomeState extends State<Home> {
                   height: 40,
                   width: 40,
                   fit: BoxFit.cover,
-                  color: burger ? Colors.white : Colors.black,
+                  color: burger
+                      ? Colors.white
+                      : const Color.fromARGB(255, 82, 162, 85),
                 )),
           ),
         ),
@@ -241,7 +252,9 @@ class _HomeState extends State<Home> {
             borderRadius: BorderRadius.circular(10),
             child: Container(
                 decoration: BoxDecoration(
-                    color: pizza ? Colors.black : Colors.white,
+                    color: pizza
+                        ? const Color.fromARGB(255, 82, 162, 85)
+                        : Colors.white,
                     borderRadius: BorderRadius.circular(10)),
                 padding: EdgeInsets.all(8),
                 child: Image.asset(
@@ -249,7 +262,9 @@ class _HomeState extends State<Home> {
                   height: 40,
                   width: 40,
                   fit: BoxFit.cover,
-                  color: pizza ? Colors.white : Colors.black,
+                  color: pizza
+                      ? Colors.white
+                      : const Color.fromARGB(255, 82, 162, 85),
                 )),
           ),
         ),
@@ -266,7 +281,9 @@ class _HomeState extends State<Home> {
             borderRadius: BorderRadius.circular(10),
             child: Container(
                 decoration: BoxDecoration(
-                    color: ffries ? Colors.black : Colors.white,
+                    color: ffries
+                        ? const Color.fromARGB(255, 82, 162, 85)
+                        : Colors.white,
                     borderRadius: BorderRadius.circular(10)),
                 padding: EdgeInsets.all(8),
                 child: Image.asset(
@@ -274,7 +291,9 @@ class _HomeState extends State<Home> {
                   height: 40,
                   width: 40,
                   fit: BoxFit.cover,
-                  color: ffries ? Colors.white : Colors.black,
+                  color: ffries
+                      ? Colors.white
+                      : const Color.fromARGB(255, 82, 162, 85),
                 )),
           ),
         ),
@@ -291,7 +310,9 @@ class _HomeState extends State<Home> {
             borderRadius: BorderRadius.circular(10),
             child: Container(
                 decoration: BoxDecoration(
-                    color: icecream ? Colors.black : Colors.white,
+                    color: icecream
+                        ? const Color.fromARGB(255, 82, 162, 85)
+                        : Colors.white,
                     borderRadius: BorderRadius.circular(10)),
                 padding: EdgeInsets.all(8),
                 child: Image.asset(
@@ -299,7 +320,9 @@ class _HomeState extends State<Home> {
                   height: 40,
                   width: 40,
                   fit: BoxFit.cover,
-                  color: icecream ? Colors.white : Colors.black,
+                  color: icecream
+                      ? Colors.white
+                      : const Color.fromARGB(255, 82, 162, 85),
                 )),
           ),
         ),
