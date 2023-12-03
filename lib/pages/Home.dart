@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
 
+import 'dart:html';
+
 import 'package:burger_buzz/Widget/widget_support.dart';
 import 'package:flutter/material.dart';
 
@@ -134,6 +136,61 @@ class _HomeState extends State<Home> {
                     ),
                   )
                 ],
+              ),
+            ),
+            SizedBox(
+              height: 30.0,
+            ),
+            Container(
+              margin: EdgeInsets.only(right: 20.0),
+              child: Material(
+                elevation: 5.0,
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  padding: EdgeInsets.all(5),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        "images/Doublechicken_burger.png",
+                        height: 120,
+                        width: 120,
+                        fit: BoxFit.cover,
+                      ),
+                      SizedBox(
+                        width: 20.0,
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            width: MediaQuery.of(context).size.width / 2,
+                            child: Text(
+                              "Deviled Double Chicken Burger",
+                              style: AppWidget.semiBoldTextFieldStyle(),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 5.0,
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width / 2,
+                            child: Text(
+                              "Deviled Chicken",
+                              style: AppWidget.LightTextFieldStyle(),
+                            ),
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width / 2,
+                            child: Text(
+                              "\Rs.750",
+                              style: AppWidget.semiBoldTextFieldStyle(),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
               ),
             )
           ],
