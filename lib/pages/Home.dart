@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(top: 50.0, left: 20.0, right: 20.0),
+        margin: EdgeInsets.only(top: 50.0, left: 20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -25,6 +25,7 @@ class _HomeState extends State<Home> {
               children: [
                 Text("Hello Shanodh,", style: AppWidget.BoldTextFieldStyle()),
                 Container(
+                  margin: EdgeInsets.only(right: 20.0),
                   padding: EdgeInsets.all(3),
                   decoration: BoxDecoration(
                       color: Colors.black,
@@ -43,46 +44,92 @@ class _HomeState extends State<Home> {
             SizedBox(
               height: 20.0,
             ),
-            showItem(),
+            Container(margin: EdgeInsets.only(right: 20.0), child: showItem()),
             SizedBox(
               height: 30.0,
             ),
             SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  Material(
-                    elevation: 5.0,
-                    borderRadius: BorderRadius.circular(20),
-                    child: Container(
-                      padding: EdgeInsets.all(14),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            "images/Chicken_burger.png",
-                            height: 150,
-                            width: 150,
-                            fit: BoxFit.cover,
-                          ),
-                          Text(
-                            "Chicken Burger",
-                            style: AppWidget.semiBoldTextFieldStyle(),
-                          ),
-                          SizedBox(
-                            height: 5.0,
-                          ),
-                          Text(
-                            "Regular Burger",
-                            style: AppWidget.LightTextFieldStyle(),
-                          ),
-                          SizedBox(
-                            height: 5.0,
-                          ),
-                          Text(
-                            "\Rs.550",
-                            style: AppWidget.semiBoldTextFieldStyle(),
-                          )
-                        ],
+                  Container(
+                    margin: EdgeInsets.all(4),
+                    child: Material(
+                      elevation: 5.0,
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        padding: EdgeInsets.all(14),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "images/Chicken_burger.png",
+                              height: 150,
+                              width: 150,
+                              fit: BoxFit.cover,
+                            ),
+                            Text(
+                              "Chicken Burger",
+                              style: AppWidget.semiBoldTextFieldStyle(),
+                            ),
+                            SizedBox(
+                              height: 5.0,
+                            ),
+                            Text(
+                              "Regular Burger",
+                              style: AppWidget.LightTextFieldStyle(),
+                            ),
+                            SizedBox(
+                              height: 5.0,
+                            ),
+                            Text(
+                              "\Rs.550",
+                              style: AppWidget.semiBoldTextFieldStyle(),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 15.0,
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(4),
+                    child: Material(
+                      elevation: 5.0,
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        padding: EdgeInsets.all(14),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "images/Chicken_burger.png",
+                              height: 150,
+                              width: 150,
+                              fit: BoxFit.cover,
+                            ),
+                            Text(
+                              "Chicken Burger",
+                              style: AppWidget.semiBoldTextFieldStyle(),
+                            ),
+                            SizedBox(
+                              height: 5.0,
+                            ),
+                            Text(
+                              "Regular Burger",
+                              style: AppWidget.LightTextFieldStyle(),
+                            ),
+                            SizedBox(
+                              height: 5.0,
+                            ),
+                            Text(
+                              "\Rs.550",
+                              style: AppWidget.semiBoldTextFieldStyle(),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   )
