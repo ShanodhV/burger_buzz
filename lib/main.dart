@@ -1,5 +1,8 @@
 import 'package:burger_buzz/pages/Home.dart';
 import 'package:burger_buzz/pages/bottomnav.dart';
+import 'package:burger_buzz/pages/login.dart';
+import 'package:burger_buzz/pages/onboard.dart';
+import 'package:burger_buzz/pages/signup.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,7 +36,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: BottomNav());
+        home: Onboard());
   }
 }
 
